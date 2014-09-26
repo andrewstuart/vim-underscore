@@ -1,9 +1,25 @@
-snippet _e "Underscore each" i
+snippet _e "each" i
 _.each(${1:collection}, function(${2:obj}${4:, ${3:key}}) {
 	${VISUAL}
 });
 endsnippet
 
-snippet _i "Index by" i
-var ${4:$1Index} =_.indexBy(${1:collection}, ${2:'${3:key}'});
-endxnippet
+snippet _i "indexBy" i
+_.indexBy(${1:collection}, ${2:'${3:key}'});
+endsnippet
+
+snippet _m "map" i
+_.map(${1:collection}, function(${2:obj}${4:, ${3:key}}) {
+	${0}
+})
+endsnippet
+
+snippet _g "groupBy" i
+_.groupBy(${1:collection}, ${2:'${3:key}'});
+endsnippet
+
+snippet reduce "reduce" i
+_.reduce(${1:collection}, function(${7:memo}, ${2:obj}${4:, ${3:key}}) {
+	${5:return $7 + $2;}
+}, ${6:initial || 0});
+endsnippet
