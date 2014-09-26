@@ -1,7 +1,7 @@
-extends javascript
-
-snippet _e "Underscore each" i
+snippet _e
 _.each(${1:collection}, function(${2:obj}${3:, ${4:key}}) {
-	${console.log($2,$4)}
+	${VISUAL}
 });
-endsnippet
+
+snippet _i
+var ${4:$1Index} =_.indexBy(${1:collection}, ${2:'${3:key}'});
